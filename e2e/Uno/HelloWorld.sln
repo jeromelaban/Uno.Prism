@@ -47,25 +47,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prism.DryIoc.Uno.WinUI", ".
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UWP", "UWP", "{A1C0FA1E-5DAD-4A8B-A96A-E4B8BAE03B6C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloUnoWorld.WinUI.Wasm", "WinUI\HelloUnoWorld.WinUI.Wasm\HelloUnoWorld.WinUI.Wasm.csproj", "{C7C97159-2358-401C-B5A5-0D1E9CE9E91B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloUnoWorld.Wasm", "WinUI\HelloUnoWorld.Wasm\HelloUnoWorld.Wasm.csproj", "{C7C97159-2358-401C-B5A5-0D1E9CE9E91B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleA.WinUI", "ModuleA\ModuleA.WinUI.csproj", "{CD19C748-53E5-4789-925D-7412C4D3F142}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloUnoWorld.WinUI.Windows.Desktop", "WinUI\HelloUnoWorld.WinUI.Windows.Desktop\HelloUnoWorld.WinUI.Windows.Desktop.csproj", "{BFA744D6-BF5B-439E-9CBA-37D2267E798C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloUnoWorld.Windows.Desktop", "WinUI\HelloUnoWorld.Windows.Desktop\HelloUnoWorld.Windows.Desktop.csproj", "{BFA744D6-BF5B-439E-9CBA-37D2267E798C}"
 EndProject
-Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "HelloUnoWorld.WinUI.Windows.Package", "WinUI\HelloUnoWorld.WinUI.Windows.Package\HelloUnoWorld.WinUI.Windows.Package.wapproj", "{19A48274-D9E3-4855-8900-C9C32198B509}"
+Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "HelloUnoWorld.Windows.Package", "WinUI\HelloUnoWorld.Windows.Package\HelloUnoWorld.Windows.Package.wapproj", "{19A48274-D9E3-4855-8900-C9C32198B509}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloUnoWorld.WinUI.Droid", "WinUI\HelloUnoWorld.WinUI.Droid\HelloUnoWorld.WinUI.Droid.csproj", "{BA6AC3E9-20B5-42E5-ACDC-C40F02AE9815}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloUnoWorld.Droid", "WinUI\HelloUnoWorld.Droid\HelloUnoWorld.Droid.csproj", "{BA6AC3E9-20B5-42E5-ACDC-C40F02AE9815}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloUnoWorld.WinUI.iOS", "WinUI\HelloUnoWorld.WinUI.iOS\HelloUnoWorld.WinUI.iOS.csproj", "{DB447F34-1D29-4C39-9388-62863932AD63}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloUnoWorld.iOS", "WinUI\HelloUnoWorld.iOS\HelloUnoWorld.iOS.csproj", "{DB447F34-1D29-4C39-9388-62863932AD63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloUnoWorld.WinUI.macOS", "WinUI\HelloUnoWorld.WinUI.macOS\HelloUnoWorld.WinUI.macOS.csproj", "{7DC51F24-0117-48FE-A07E-11773E6C4A0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloUnoWorld.macOS", "WinUI\HelloUnoWorld.macOS\HelloUnoWorld.macOS.csproj", "{7DC51F24-0117-48FE-A07E-11773E6C4A0C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloUnoWorld.WinUI.Skia.Gtk", "WinUI\HelloUnoWorld.WinUI.Skia.Gtk\HelloUnoWorld.WinUI.Skia.Gtk.csproj", "{058CEF02-4C97-47BE-943E-6E7CC5AD4528}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloUnoWorld.Skia.Gtk", "WinUI\HelloUnoWorld.Skia.Gtk\HelloUnoWorld.Skia.Gtk.csproj", "{058CEF02-4C97-47BE-943E-6E7CC5AD4528}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloUnoWorld.WinUI.Skia.WPF", "WinUI\HelloUnoWorld.WinUI.Skia.WPF\HelloUnoWorld.WinUI.Skia.WPF.csproj", "{7C908228-12F2-4DF5-BAD5-27CD67945771}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloUnoWorld.Skia.WPF", "WinUI\HelloUnoWorld.Skia.WPF\HelloUnoWorld.Skia.WPF.csproj", "{7C908228-12F2-4DF5-BAD5-27CD67945771}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloUnoWorld.WinUI.Skia.Wpf.Host", "WinUI\HelloUnoWorld.WinUI.Skia.WPF.Host\HelloUnoWorld.WinUI.Skia.Wpf.Host.csproj", "{3C01BE69-3A01-40DB-9C7B-B114A3B9B419}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloUnoWorld.Skia.Wpf.Host", "WinUI\HelloUnoWorld.Skia.WPF.Host\HelloUnoWorld.Skia.Wpf.Host.csproj", "{3C01BE69-3A01-40DB-9C7B-B114A3B9B419}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution

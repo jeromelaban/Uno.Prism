@@ -8,6 +8,15 @@ jobs:
     vmImage: $(LinuxImage)
   workspace:
     clean: all
+
+  strategy:
+    matrix:
+      UWP:
+        TARGET_XAML_FLAVOR: UWP
+
+      WinUI:
+        TARGET_XAML_FLAVOR: WinUI
+
   steps:
   - template: ../steps/prepare-build.yml
 
@@ -16,6 +25,7 @@ jobs:
     env:
       BUILD_SOURCESDIRECTORY: "$(build.sourcesdirectory)"
       BUILD_ARTIFACTSTAGINGDIRECTORY: "$(build.artifactstagingdirectory)"
+      TARGET_XAML_FLAVOR: "$(TARGET_XAML_FLAVOR)"
     displayName: 'Run UI Tests'
 
   - task: PublishTestResults@2
@@ -42,6 +52,14 @@ jobs:
   workspace:
     clean: all
 
+  strategy:
+    matrix:
+      UWP:
+        TARGET_XAML_FLAVOR: UWP
+
+      WinUI:
+        TARGET_XAML_FLAVOR: WinUI
+
   steps:
   - template: ../steps/prepare-build.yml
 
@@ -53,6 +71,7 @@ jobs:
     env:
       BUILD_SOURCESDIRECTORY: "$(build.sourcesdirectory)"
       BUILD_ARTIFACTSTAGINGDIRECTORY: "$(build.artifactstagingdirectory)"
+      TARGET_XAML_FLAVOR: "$(TARGET_XAML_FLAVOR)"
 
     displayName: 'Run UI Tests'
 
@@ -79,6 +98,15 @@ jobs:
     vmImage: $(MacImage)
   workspace:
     clean: all
+
+  strategy:
+    matrix:
+      UWP:
+        TARGET_XAML_FLAVOR: UWP
+
+      WinUI:
+        TARGET_XAML_FLAVOR: WinUI
+
   steps:
   - template: ../steps/prepare-build.yml
 
@@ -90,6 +118,7 @@ jobs:
     env:
       BUILD_SOURCESDIRECTORY: "$(build.sourcesdirectory)"
       BUILD_ARTIFACTSTAGINGDIRECTORY: "$(build.artifactstagingdirectory)"
+      TARGET_XAML_FLAVOR: "$(TARGET_XAML_FLAVOR)"
 
     displayName: 'Run UI Tests'
 
