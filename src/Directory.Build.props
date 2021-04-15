@@ -38,8 +38,8 @@
     <_AdjustedOutputProjects>$(_AdjustedOutputProjects);Prism.Uno.WinUI.csproj</_AdjustedOutputProjects>
     <_AdjustedOutputProjects>$(_AdjustedOutputProjects);Prism.DryIoc.Uno.csproj</_AdjustedOutputProjects>
     <_AdjustedOutputProjects>$(_AdjustedOutputProjects);Prism.DryIoc.Uno.WinUI.csproj</_AdjustedOutputProjects>
-    <_AdjustedOutputProjects>$(_AdjustedOutputProjects);Prism.Prism.Uno.csproj</_AdjustedOutputProjects>
-    <_AdjustedOutputProjects>$(_AdjustedOutputProjects);Prism.Prism.Uno.WinUI.csproj</_AdjustedOutputProjects>
+    <_AdjustedOutputProjects>$(_AdjustedOutputProjects);Prism.Unity.Uno.csproj</_AdjustedOutputProjects>
+    <_AdjustedOutputProjects>$(_AdjustedOutputProjects);Prism.Unity.Uno.WinUI.csproj</_AdjustedOutputProjects>
   </PropertyGroup>
 
   <PropertyGroup Condition="$(_AdjustedOutputProjects.Contains('$(MSBuildProjectFile)'))">
