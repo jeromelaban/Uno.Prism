@@ -20,6 +20,7 @@ steps:
     checkLatest: true
 
 - task: NuGetCommand@2
+  condition: ne(variables['disable_package_restore_step'], 'true')
   displayName: 'NuGet restore'
   inputs:
     restoreSolution: ${{ parameters.solution }}
