@@ -9,6 +9,9 @@ jobs:
   workspace:
     clean: all
 
+  variables:
+    disable_package_restore_step: true
+
   strategy:
     matrix:
       UWP:
@@ -51,6 +54,9 @@ jobs:
 
   workspace:
     clean: all
+
+  variables:
+    disable_package_restore_step: true
 
   strategy:
     matrix:
@@ -98,6 +104,9 @@ jobs:
     vmImage: $(MacImage)
   workspace:
     clean: all
+
+  variables:
+    disable_package_restore_step: true
 
   strategy:
     matrix:
