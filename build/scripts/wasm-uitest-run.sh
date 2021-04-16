@@ -26,7 +26,7 @@ export UNO_UITEST_CHROME_CONTAINER_MODE=true
 mkdir -p $UNO_UITEST_SCREENSHOT_PATH
 
 # The python server serves the current working directory, and may be changed by the nunit runner
-bash -c "cd $BUILD_SOURCESDIRECTORY/e2e/Uno/$TARGET_XAML_FLAVOR/HelloUnoWorld.Wasm/bin/Release/netstandard2.0/dist/; python server.py &"
+bash -c "cd $BUILD_SOURCESDIRECTORY/e2e/Uno/$TARGET_XAML_FLAVOR/HelloUnoWorld.Wasm/bin/Release/net5.0/dist/; python server.py &"
 
 mono $BUILD_SOURCESDIRECTORY/build/NUnit.ConsoleRunner.3.10.0/tools/nunit3-console.exe \
 --trace=Verbose \
