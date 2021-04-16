@@ -1,6 +1,7 @@
 ﻿<linker>
   <assembly fullname="HelloUnoWorld.Wasm" />
   <assembly fullname="Uno.UI" />
+  <assembly fullname="Microsoft.Extensions.Options" />
   <assembly fullname="ModuleA" />
 
   <assembly fullname="System.Core">
