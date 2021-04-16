@@ -30,8 +30,8 @@
     <PackageReference Update="Uno.WinUI.Skia.Gtk" Version="3.6.6" />
     <PackageReference Update="Uno.WinUI.Skia.Wpf" Version="3.6.6" />
     <PackageReference Update="Uno.WinUI.WebAssembly" Version="3.6.6" />
-    <PackageReference Update="Uno.Wasm.Bootstrap" Version="2.0.0" />
-    <PackageReference Update="Uno.Wasm.Bootstrap.DevServer" Version="2.0.0" />
+    <PackageReference Update="Uno.Wasm.Bootstrap" Version="2.1.0-dev.53" />
+    <PackageReference Update="Uno.Wasm.Bootstrap.DevServer" Version="2.1.0-dev.53" />
     <PackageReference Update="Microsoft.Windows.Compatibility" Version="5.0.1" />
     <PackageReference Update="Microsoft.ProjectReunion" Version="0.5.0" />
     <PackageReference Update="Microsoft.ProjectReunion.Foundation" Version="0.5.0" />
