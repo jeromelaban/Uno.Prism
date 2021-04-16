@@ -8,6 +8,10 @@ cd $BUILD_SOURCESDIRECTORY
 msbuild /r /p:Configuration=Release $BUILD_SOURCESDIRECTORY/e2e/Uno/HelloUnoWorld.UITests/HelloUnoWorld.UITests.csproj
 dotnet build /p:Configuration=Release /p:DISABLE_GITVERSIONING=true $BUILD_SOURCESDIRECTORY/e2e/Uno/$TARGET_XAML_FLAVOR/HelloUnoWorld.Wasm/HelloUnoWorld.Wasm.csproj
 
+# copy build app to artifacts
+mkdir -p $BUILD_ARTIFACTSTAGINGDIRECTORY/e2e/uno/$TARGET_XAML_FLAVOR/site
+cp -r $BUILD_SOURCESDIRECTORY/e2e/Uno/$TARGET_XAML_FLAVOR/HelloUnoWorld.Wasm/bin/Release/net5.0/dist/* $BUILD_ARTIFACTSTAGINGDIRECTORY/e2e/uno/$TARGET_XAML_FLAVOR/site
+
 cd $BUILD_SOURCESDIRECTORY/build
 
 npm i chromedriver@86.0.0
