@@ -41,6 +41,7 @@
     <PackageReference Include="Uno.Extensions.Logging.WebAssembly.Console" />
     <PackageReference Include="Uno.WinUI.WebAssembly" OverrideVersion="3.6.6" />
     <PackageReference Include="Uno.WinUI.RemoteControl" OverrideVersion="3.6.6" Condition="'$(Configuration)'=='Debug'" />
+    <PackageReference Include="Uno.SourceGenerationTasks" OverrideVersion="3.0.0" />
     <PackageReference Include="Uno.Wasm.Bootstrap" />
     <PackageReference Include="Uno.Wasm.Bootstrap.DevServer" />
     <PackageReference Include="Microsoft.Windows.Compatibility" />
