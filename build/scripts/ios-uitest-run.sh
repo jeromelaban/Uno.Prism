@@ -9,7 +9,7 @@ xcrun simctl list devices --json
 
 cd $BUILD_SOURCESDIRECTORY
 msbuild /r /p:Configuration=Release $BUILD_SOURCESDIRECTORY/e2e/Uno/HelloUnoWorld.UITests/HelloUnoWorld.UITests.csproj
-msbuild /r /p:Configuration=Release "/p:Platform=iPhoneSimulator" $BUILD_SOURCESDIRECTORY/e2e/Uno/HelloUnoWorld.iOS/HelloUnoWorld.iOS.csproj
+msbuild /r /p:Configuration=Release "/p:Platform=iPhoneSimulator" $BUILD_SOURCESDIRECTORY/e2e/Uno/$TARGET_XAML_FLAVOR/HelloUnoWorld.iOS/HelloUnoWorld.iOS.csproj
 
 cd $BUILD_SOURCESDIRECTORY/build
 
