@@ -66,6 +66,8 @@ namespace Prism
         /// </summary>
         protected virtual void ConfigureViewModelLocator()
         {
+            Console.WriteLine("ConfigureViewModelLocator()");
+
             ViewModelLocationProvider.SetDefaultViewModelFactory((view, type) =>
             {
                 return Container.Resolve(type);
@@ -77,6 +79,8 @@ namespace Prism
         /// </summary>
         public virtual void Initialize()
         {
+            Console.WriteLine("begin Initialize()");
+
             ContainerLocator.SetContainerExtension(CreateContainerExtension);
             _containerExtension = ContainerLocator.Current;
             _moduleCatalog = CreateModuleCatalog();
@@ -84,21 +88,35 @@ namespace Prism
             RegisterTypes(_containerExtension);
             _containerExtension.FinalizeExtension();
 
+            Console.WriteLine("1 Initialize()");
+
             ConfigureModuleCatalog(_moduleCatalog);
 
+            Console.WriteLine("2 Initialize()");
+
             var regionAdapterMappings = _containerExtension.Resolve<RegionAdapterMappings>();
+            Console.WriteLine("2.1 Initialize()");
+
             ConfigureRegionAdapterMappings(regionAdapterMappings);
+
+            Console.WriteLine("3 Initialize()");
 
             var defaultRegionBehaviors = _containerExtension.Resolve<IRegionBehaviorFactory>();
             ConfigureDefaultRegionBehaviors(defaultRegionBehaviors);
 
+            Console.WriteLine("4 Initialize()");
+
             RegisterFrameworkExceptionTypes();
+
+            Console.WriteLine("5 Initialize()");
 
             var shell = CreateShell();
             if (shell != null)
             {
                 MvvmHelpers.AutowireViewModel(shell);
                 InitializeShell(shell);
+
+                Console.WriteLine("6 Initialize()");
 
                 void FinalizeInitialization()
                 {
@@ -108,6 +126,8 @@ namespace Prism
                     InitializeModules();
                     OnInitialized();
                 }
+
+                Console.WriteLine("7 Initialize()");
 
                 if (shell is FrameworkElement fe)
                 {
@@ -140,6 +160,8 @@ namespace Prism
                     FinalizeInitialization();
                 }
             }
+
+            Console.WriteLine("end Initialize()");
         }
 
         /// <summary>

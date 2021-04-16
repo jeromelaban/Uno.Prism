@@ -5,9 +5,13 @@
     <TargetFramework>net5.0</TargetFramework>
     <NoWarn>NU1701</NoWarn>
     <DefineConstants>$(DefineConstants);HAS_WINUI</DefineConstants>
+    <WasmShellILLinkerEnabled>false</WasmShellILLinkerEnabled>
+    <WasmShellEnableEmccProfiling>true</WasmShellEnableEmccProfiling>
+    <WasmShellForceUseWSL>true</WasmShellForceUseWSL>
+    <WasmShellDisableSDKCheckSumValidation>true</WasmShellDisableSDKCheckSumValidation>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)'=='Debug'">
-    <MonoRuntimeDebuggerEnabled>true</MonoRuntimeDebuggerEnabled>
+    <!--<MonoRuntimeDebuggerEnabled>true</MonoRuntimeDebuggerEnabled>-->
     <DefineConstants>$(DefineConstants);TRACE;DEBUG</DefineConstants>
     <DebugType>portable</DebugType>
     <DebugSymbols>true</DebugSymbols>
@@ -19,11 +23,27 @@
     <UpToDateCheckInput Include="..\HelloUnoWorld.Shared\**\*.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <WasmShellNativeCompile Include="test.c" />
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Include="WasmCSS\Fonts.css" />
     <EmbeddedResource Include="WasmScripts\AppManifest.js" />
   </ItemGroup>
   <ItemGroup>
-    <LinkerDescriptor Include="LinkerConfig.xml" />
+    <!--
+    Uncomment to enable ASAN
+    <WasmShellExtraEmccFlags Include="-fsanitize=address" />
+    <WasmShellExtraEmccFlags Include="-s TOTAL_MEMORY=393216000" />
+    -->
+    
+    <!--<LinkerDescriptor Include="LinkerConfig.xml" />-->
+    <!--<WasmShellExtraEmccFlags Include="-s DETERMINISTIC" />-->
+    <!--<WasmShellExtraEmccFlags Include="-s SAFE_HEAP" />-->
+  </ItemGroup>
+  <ItemGroup>
+    <!--<WasmShellMonoEnvironment Include="MONO_GC_PARAMS" Value="soft-heap-limit=512m,nursery-size=512m,evacuation-threshold=66,major=marksweep" />-->
+    <!--<WasmShellMonoEnvironment Include="MONO_LOG_LEVEL" Value="debug" />
+    <WasmShellMonoEnvironment Include="MONO_LOG_MASK" Value="all" />-->
   </ItemGroup>
   <ItemGroup>
     <!--

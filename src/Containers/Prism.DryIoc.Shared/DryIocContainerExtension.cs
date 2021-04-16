@@ -290,6 +290,8 @@ namespace Prism.DryIoc
         {
             try
             {
+                Console.WriteLine($"Resolve {type}");
+
                 var container = _currentScope?.Resolver ?? Instance;
                 return container.Resolve(type, args: parameters.Select(p => p.Instance).ToArray());
             }
@@ -310,6 +312,8 @@ namespace Prism.DryIoc
         {
             try
             {
+                Console.WriteLine($"Resolve {type}, {name}");
+
                 var container = _currentScope?.Resolver ?? Instance;
                 return container.Resolve(type, name, args: parameters.Select(p => p.Instance).ToArray());
             }

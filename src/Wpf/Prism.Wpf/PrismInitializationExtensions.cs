@@ -1,4 +1,5 @@
-﻿using Prism.Events;
+﻿using System;
+using Prism.Events;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Mvvm;
@@ -49,6 +50,8 @@ namespace Prism
 
         internal static void RegisterDefaultRegionBehaviors(this IRegionBehaviorFactory regionBehaviors)
         {
+            Console.WriteLine("RegisterDefaultRegionBehaviors");
+
             regionBehaviors.AddIfMissing<BindRegionContextToDependencyObjectBehavior>(BindRegionContextToDependencyObjectBehavior.BehaviorKey);
             regionBehaviors.AddIfMissing<RegionActiveAwareBehavior>(RegionActiveAwareBehavior.BehaviorKey);
             regionBehaviors.AddIfMissing<SyncRegionContextWithHostBehavior>(SyncRegionContextWithHostBehavior.BehaviorKey);
@@ -61,9 +64,13 @@ namespace Prism
 
         internal static void RegisterDefaultRegionAdapterMappings(this RegionAdapterMappings regionAdapterMappings)
         {
+            Console.WriteLine("begin RegisterDefaultRegionAdapterMappings");
             regionAdapterMappings.RegisterMapping<Selector, SelectorRegionAdapter>();
+            Console.WriteLine("1 RegisterDefaultRegionAdapterMappings");
             regionAdapterMappings.RegisterMapping<ItemsControl, ItemsControlRegionAdapter>();
+            Console.WriteLine("2 RegisterDefaultRegionAdapterMappings");
             regionAdapterMappings.RegisterMapping<ContentControl, ContentControlRegionAdapter>();
+            Console.WriteLine("end RegisterDefaultRegionAdapterMappings");
         }
 
         internal static void RunModuleManager(IContainerProvider containerProvider)

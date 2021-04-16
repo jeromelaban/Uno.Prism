@@ -1,4 +1,6 @@
-﻿namespace Prism.Regions
+﻿using System;
+
+namespace Prism.Regions
 {
     /// <summary>
     /// Extension methods for the IRegionBehaviorFactory.
@@ -13,6 +15,9 @@
         /// <param name="behaviorKey">The behavior key that's used to find if a certain behavior is already added.</param>
         public static void AddIfMissing<T>(this IRegionBehaviorFactory regionBehaviorFactory, string behaviorKey) where T : IRegionBehavior
         {
+            Console.WriteLine($"AddIfMissing({typeof(T)}, {behaviorKey})");
+
+
             var behaviorType = typeof(T);
             regionBehaviorFactory.AddIfMissing(behaviorKey, behaviorType);
         }

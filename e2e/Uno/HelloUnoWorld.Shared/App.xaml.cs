@@ -44,19 +44,23 @@ namespace HelloUnoWorld
         /// </summary>
         public App()
         {
-            InitializeLogging();
+            Console.WriteLine("App()");
+            // InitializeLogging();
 
             this.InitializeComponent();
         }
 
         protected override void OnLaunched(LaunchActivatedEventArgs args)
         {
+            Console.WriteLine("begin OnLaunched()");
+
 #if __IOS__
             // requires Xamarin Test Cloud Agent
             Xamarin.Calabash.Start();
 #endif
 
             base.OnLaunched(args);
+            Console.WriteLine("end OnLaunched()");
         }
 
 #if !HAS_UNO_WINUI && !NETCOREAPP
@@ -133,6 +137,8 @@ namespace HelloUnoWorld
 
         protected override UIElement CreateShell()
         {
+            Console.WriteLine("CreateShell()");
+
             var shell = Container.Resolve<Shell>();
 
 #if NET5_0 && WINDOWS
@@ -151,6 +157,8 @@ namespace HelloUnoWorld
 
         protected override void OnInitialized()
         {
+            Console.WriteLine("CreateShell()");
+
             base.OnInitialized();
             var regionManager = Container.Resolve<IRegionManager>();
             regionManager.RequestNavigate("InitialRegion", nameof(InitialView));
