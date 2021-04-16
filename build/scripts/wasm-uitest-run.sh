@@ -13,6 +13,10 @@ cd $BUILD_SOURCESDIRECTORY/build
 npm i chromedriver@83.0.1
 npm i puppeteer@3.1.0
 
+# install dotnet serve
+dotnet tool install dotnet-serve --version 1.8.15 --tool-path $BUILD_SOURCESDIRECTORY/build/tools
+export PATH="$PATH:$BUILD_SOURCESDIRECTORY/build/tools"
+
 wget https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
 mono nuget.exe install NUnit.ConsoleRunner -Version 3.10.0
 
@@ -23,10 +27,9 @@ export UNO_UITEST_SCREENSHOT_PATH=$BUILD_ARTIFACTSTAGINGDIRECTORY/e2e/uno/$TARGE
 export UNO_UITEST_PLATFORM=Browser
 export UNO_UITEST_CHROME_CONTAINER_MODE=true
 
-mkdir -p $UNO_UITEST_SCREENSHOT_PATH
+dotnet serve -p 8000 -d "$BUILD_SOURCESDIRECTORY/e2e/Uno/$TARGET_XAML_FLAVOR/HelloUnoWorld.Wasm/bin/Release/net5.0/dist/" &
 
-# The python server serves the current working directory, and may be changed by the nunit runner
-bash -c "cd $BUILD_SOURCESDIRECTORY/e2e/Uno/$TARGET_XAML_FLAVOR/HelloUnoWorld.Wasm/bin/Release/net5.0/dist/; python server.py &"
+mkdir -p $UNO_UITEST_SCREENSHOT_PATH
 
 mono $BUILD_SOURCESDIRECTORY/build/NUnit.ConsoleRunner.3.10.0/tools/nunit3-console.exe \
 --trace=Verbose \
